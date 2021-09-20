@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   
+   
+     <script>
+    window.onload = function(){
+      pantalla=document.getElementById("textoPantalla");
+    }
+    x="0";
+    xi=1;
+    coma=0;
+
+    window.onload = function(){
+      pantalla=document.getElementById("textoPantalla");
+    }
+    x="0";
+    xi=1;
+    coma=0;
+    ni=0;
+    op="no";
+
+           function numero(xx) {
+      if (x=="0" || xi==1  ) {
+        pantalla.innerHTML=xx;
+        x=xx;
+        if (xx==".") {
+          pantalla.innerHTML="0.";
+          x=xx;
+          coma=1;
+        }
+      }
+      else {
+        if (xx=="." && coma==0) {
+          pantalla.innerHTML+=xx;
+          x+=xx;
+          coma=1;
+        }
+
+        else if (xx=="." && coma==1) {}
+
+        else {
+          pantalla.innerHTML+=xx;
+          x+=xx
+        }
+      }
+      xi=0
+    }
+    function operar(s) {
+      igualar()
+      ni=x
+      op=s;
+      xi=1;
+    }
+    function igualar() {
+      if (op=="no") {
+        pantalla.innerHTML=x;
+      }
+            else {
+        sl=ni+op+x;
+        sol=eval(sl)
+        pantalla.innerHTML=sol
+        x=sol;
+        op="no";
+        xi=1;
+      }
+    }
+function opuest() { 
+         nx=Number(x);
+         nx=-nx;
+         x=String(nx);
+         pantalla.innerHTML=x;
+         }
+         
+       
+    function raizc() {
+      x=Math.sqrt(x) 
+      pantalla.innerHTML=x; 
+      op="no"; 
+      xi=1;
+    }
+         function pi() {
+      x=Math.PI(x)
+      pantalla.innerHTML=x;
+      op="no";
+      xi=1;
+    }
+     function sin() {
+      x=Math.sin(x)
+      pantalla.innerHTML=x;
+      xi=1;
+    }
+    
+         function cos() {
+      x=Math.cos(x) 
+      pantalla.innerHTML=x;
+      op="no";
+      xi=1;
+    }
+    
+   function tan() {
+      x=Math.tan(x)
+      pantalla.innerHTML=x;
+      op="no"; 
+      xi=1;
+    }
+    
+    
+    function prac() {
+        x=x/100;
+      pantalla.innerHTML=x;
+      op="no";
+      xi=1;
+    }
+    
+     function paw() {
+       x=Math.pow(x,x)
+      pantalla.innerHTML=x;
+      op="no";
+      xi=1;
+    }
+   
+    function borradoParcial() {
+      pantalla.innerHTML=0;
+      x=0;
+      coma=0;
+    }
+    function borradoTotal() {
+      pantalla.innerHTML=0;
+      x="0";
+      coma=0;
+      ni=0
+      op="no"
+    }
+    </script>
+    
+    <div id="container">
+        <div id="calculator">
+      <form action="#" name="calculadora" id="calculadora">
+           <table style="width:250px;">
+               <div id="result">
+                   <div id="history">
+                       <p id="textoPantalla">0</p>
+                       <p id="si">_________________________________</p >
+            
+           
+            </div>
+                   </div>
+        
+            <p>Cientifica</p>
+             <tr>
+                <td style="text-align: center;" class="cell"> <input class="calcbttn"
+                value="(" onclick="numero('(')"  type="button"> </td>
+                 <td style="text-align: center;" class="cell"> <input class="calcbttn"
+                value=")" onclick="numero(')')"  type="button"> </td>
+                 
+                 <td style="text-align: center;" class="cell"> <input class="calcbttn"
+                value="sin"  type="button" onclick="sin()"> </td>
+            <td style="text-align: center;" class="cell"> <input class="calcbttn"
+                value="cos" type="button" onclick="cos()"></td>
+            <td style="text-align: center;" class="cell"> <input class="calcbttn"
+                value="tan"  onclick="tan()" type="button"> </td>
+            <td style="text-align: center;" class="cell">  <input class="calcbttn"
+                type="button" value="Raiz" onclick="raizc()" /> </td>
+            </tr>
+             <tr align="center">
+            <td class="cell"> <input class="calcbttn" value="^" id="^" 
+                    onclick="paw()"type="button">
+            </td>
+            <td class="cell"> <input class="calcbttn" value=" " id="va" type="button">
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="%" onclick="prac()" />
+            </td>
+            <td class="cell"> <input class="calcbttn" value=" " id=" va " type="button">
+            </td>
+            <td class="cell"> <input class="calcbttn" value="log10" id="log10"
+                type="button"> </td>
+            <td class="cell"> <input class="calcbttn" value="  " id="va"
+                type="button"> </td>
+          </tr>
+           
+          </tbody>
+          
+                
+      </table> 
+       
+        <div id="scientificCalc11">
+      <div id="errmsg"></div>
+      <table style="width:250px;">
+        <tbody id="keyboard">
+        
+            <p>Basica</p>
+             <tr>
+            <td style="text-align: center;" class="cell">  <input type="button"
+                class="calcbttn" value="7" onclick="numero('7')" /></td>
+            <td style="text-align: center;" class="cell"> <input type="button"
+                class="calcbttn" value="8" onclick="numero('8')" /></td>
+            <td style="text-align: center;" class="cell">  <input type="button"
+                class="calcbttn" value="9" onclick="numero('9')" /></td>
+             <td style="text-align: center;" class="cell"> <input type="button" 
+                 class="calcbtt" value="CE" onclick="borradoParcial()"  /> </td>
+            <td style="text-align: center;" class="cell"> <input type="button"
+               class="calcbt" value="C" onclick="borradoTotal()"  /> </td>
+          </tr>
+          
+          <tr align="center">
+            <td class="cell"> <input class="calcbttn" type="button" value="4" onclick="numero('4')" /> 
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="5" onclick="numero('5')" /> 
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="6" onclick="numero('6')" /> 
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="+/-" onclick="opuest()" />
+            </td>
+            <td class="cell"> <input class="calcbttnn" type="button" value="+" onclick="operar('+')" />
+            </td>
+            <td class="cell"> <input class="calcbttnn"  type="button" value="-" onclick="operar('-')" />
+            </td>
+          </tr>
+          <tr align="center">
+            <td class="cell"> <input class="calcbttn" type="button" value="1" onclick="numero('1')" /> 
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="2" onclick="numero('2')" /> 
+            </td>
+            <td class="cell"> <input class="calcbttn" type="button" value="3" onclick="numero('3')" /> 
+            </td>
+            <td class="cell">     <input class="calcbttnn" type="button" value="*" onclick="operar('*')" />
+            </td>
+            <td class="cell"> <input class="calcbttnn"  type="button" value="/" onclick="operar('/')"/>
+            </td>
+             <td class="cell"> <input class="calcbttnn" value="π" type="button" onClick="pi()"   />
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" class="cell"><input type="button"
+              class="calcbttn"  value="0" onclick="numero('0')" /> </td>
+            <td style="text-align: center;" class="cell">  <input class="calcbttn" 
+                type="button" value="." onclick="numero('.')" /> </td>
+            <td style="text-align: center;" class="cell"> <input type="button" 
+                class="calcbt" value="=" onclick="igualar()" /> </td>
+          </tr>
+          <tr>
+          </tbody>
+          
+                
+      </table> 
+       </div>
+    </div>
+         </div>
+    </body>
+</html>
