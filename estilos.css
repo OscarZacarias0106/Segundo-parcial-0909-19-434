@@ -1,0 +1,92 @@
+body{
+	background-color: black;
+}
+#container{
+	width: 1000px;
+	height: 550px;
+	margin: 20px auto;	
+}
+#calculator{
+	width: 520px;
+	height: 720px;
+	background-color:#919191;
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p
+{
+font-size: 25px;
+	color: white; 
+        margin: 15px;
+}
+#result{
+	height: 100px;
+}
+#si{
+   padding-top: 0%;
+}
+#history{
+	text-align:initial;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 2px;
+	font-size: 25px;
+	color: white;
+}
+.calcbttn{
+font-size: 12px;
+color: white;
+	background-color: #919191;
+    width: 45px;
+	height: 45px;
+	margin: 10px;
+	float: left;
+	  border-radius: 50%;
+          border:3px solid #ff6699;
+	font-weight: bold;
+        cursor: pointer;    
+        outline: 0;
+	
+        }
+ .calcbtt{
+        font-size: 13px;
+        color: white;
+	background-color: #ff6699;
+        width: 100px;
+	height: 50px;
+	margin: -25px;
+	float: left;
+        border: #ff6699 5px solid;
+	 cursor: pointer;    
+        outline: 0;
+        }
+        .calcbt{
+        font-size: 13px;
+        color: white;
+	background-color: #919191;
+        width: 100px;
+	height: 50px;
+	margin: 12px;
+	float: left;
+        border: #ff6699 5px solid;
+         cursor: pointer;    
+        outline: 0;
+	
+        }
+        
+        .calcbttnn{
+font-size: 13px;
+color: white;
+	background-color: #919191;
+    width: 45px;
+	height: 45px;
+	margin-right: 50%;
+	  border-radius: 50%;
+          border:3px solid #ff6699;
+	font-weight: bold;
+	 cursor: pointer;    
+        outline: 0;
+        }
